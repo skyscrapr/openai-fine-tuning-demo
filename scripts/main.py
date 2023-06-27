@@ -8,4 +8,4 @@ sample_hockey_tweet = """Thank you to the
 @DetroitRedWings
  !!"""
 res = openai.Completion.create(model=ft_model, prompt=sample_hockey_tweet + '\n\n###\n\n', max_tokens=1, temperature=0, logprobs=2)
-res['choices'][0]['text']
+print("response: " + res['choices'][0]['text'])

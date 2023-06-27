@@ -9,11 +9,11 @@ terraform {
 provider "openai" {}
 
 resource "openai_file" "training_file" {
-  filename = "sport2_prepared_train.jsonl"
+  filepath = "sport2_prepared_train.jsonl"
 }
 
 resource "openai_file" "validation_file" {
-  filename = "sport2_prepared_valid.jsonl"
+  filepath = "sport2_prepared_valid.jsonl"
 }
 
 resource "openai_finetune" "example" {

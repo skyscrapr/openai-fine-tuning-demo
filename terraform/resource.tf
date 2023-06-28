@@ -25,3 +25,6 @@ resource "openai_finetune" "example" {
   wait                           = true
 }
 
+output finetune_model {
+  value = openai_finetune.example.fine_tune.fine_tuned_model
+}

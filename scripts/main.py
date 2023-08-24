@@ -1,6 +1,6 @@
 import openai
 
-ft_model = "ada"
+ft_model = "ada:ft-personal-2023-08-24-02-29-58"
 
 sample_hockey_tweet = """Thank you to the 
 @Canes

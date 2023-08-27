@@ -6,7 +6,13 @@ terraform {
   }
 }
 
-provider "openai" {}
+data "hcp_vault_secrets_app" "openai" {
+  app_name = "openai"
+}
+
+provider "openai" {
+  api_key = data.hcp_vault_secrets_app.openai.secrets["api_key"]
+}
 
 resource "openai_file" "training_file" {
   filepath = "sport2_prepared_train.jsonl"

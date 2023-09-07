@@ -23,10 +23,10 @@ resource "openai_file" "validation_file" {
 }
 
 resource "openai_finetuning_job" "example" {
-  training_file                  = openai_file.training_file.id
-  validation_file                = openai_file.validation_file.id
-  model                          = "ada"
-  wait                           = true
+	training_file                  = openai_file.training_file.id
+	validation_file                = openai_file.validation_file.id
+	model                          = "babbage-002"
+	wait = true
 }
 
 output fine_tuned_model {

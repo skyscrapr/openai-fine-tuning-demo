@@ -15,17 +15,17 @@ provider "openai" {
 }
 
 resource "openai_file" "training_file" {
-  filepath = "sport2_prepared_train.jsonl"
+  filepath = "recipe_training.jsonl"
 }
 
-resource "openai_file" "validation_file" {
-  filepath = "sport2_prepared_valid.jsonl"
-}
+# resource "openai_file" "validation_file" {
+#   filepath = "recipe_validation.jsonl"
+# }
 
 resource "openai_finetuning_job" "example" {
 	training_file                  = openai_file.training_file.id
-	validation_file                = openai_file.validation_file.id
-	model                          = "babbage-002"
+	# validation_file                = openai_file.validation_file.id
+	model                          = "gpt-4o-mini-2024-07-18"
 	wait = true
 }
 

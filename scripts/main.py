@@ -7,7 +7,7 @@ import pandas as pd
 
 client = OpenAI()
 
-fine_tuned_model_id = "ft:gpt-4o-mini-2024-07-18:skyscrapr::B3EO62av"
+fine_tuned_model_id = "ft:gpt-4.1-nano-2025-04-14:skyscrapr::DBAeawNd"
 
 system_message = "You are a helpful recipe assistant. You are to extract the generic ingredients from each of the recipes provided."
 
